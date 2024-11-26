@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: 16003-44-ui
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: 16003-44-ui

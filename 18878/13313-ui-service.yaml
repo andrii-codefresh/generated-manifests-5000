@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: 18878-12-ui
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: 18878-12-ui

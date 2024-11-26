@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: 82516-33-ui
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: 82516-33-ui

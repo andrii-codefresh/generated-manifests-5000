@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: 43321-10-ui
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: 43321-10-ui

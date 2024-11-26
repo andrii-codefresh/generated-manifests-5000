@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: 23025-2-ui
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: 23025-2-ui

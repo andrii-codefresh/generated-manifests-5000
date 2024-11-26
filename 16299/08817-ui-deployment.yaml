@@ -1,0 +1,41 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: 16299-8-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: 16299-8-ui
+  template:
+    metadata:
+      labels:
+        app: 16299-8-ui
+    spec:
+      containers:
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+        name: 16299-8-ui
+        ports:
+        - containerPort: 80
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: 16299-8-echoserver
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: 16299-8-echoserver
+  template:
+    metadata:
+      labels:
+        app: 16299-8-echoserver
+    spec:
+      containers:
+        - image: k8s.gcr.io/echoserver:1.1
+          name: 16299-8-echoserver
+          ports:
+            - containerPort: 80
